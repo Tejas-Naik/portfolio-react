@@ -1,9 +1,11 @@
-export default function FeaturedProject({image, title, description, tags, links, orientation=1}) {
+import React from 'react'
+
+function FeaturedProjects({ image, title, description, tags, links, orientation = 1 }) {
     return (
         <div className={"flex items-center w-full relative h-[436px] mb-[100px] border border-slate-700 md:border-0 drop-shadow md:drop-shadow-none"}>
-            <div className={`md:max-w-[60%] absolute ${orientation ? "left-0" : "right-0"} h-full md:h-auto md:w-full`}>
+            <div className={`md:max-w-[55%] absolute ${orientation ? "left-0" : "right-0"} h-full md:h-auto md:w-full`}>
                 <div className={"w-full h-full absolute top-0 bg-black opacity-40 brightness-50 hover:hidden z-10"} />
-                <img src={image} className={`blur-sm brightness-50 h-full md:brightness-100 md:blur-0 object-cover md:object-contain drop-shadow-2xl`} alt={"Hal"}/>
+                <img src={image} className={`blur-sm brightness-50 h-full md:brightness-100 md:blur-0 object-cover md:object-contain drop-shadow-2xl`} alt={"Hal"} />
             </div>
             <div className={`flex flex-col p-8 md:p-0 z-10 ${orientation ? "ml-auto md:items-end" : "md:items-start"} w-full md:w-fit`}>
                 <span className={"font-monospace text-sm cursor-default accent mb-2"}>Featured Project</span>
@@ -14,7 +16,7 @@ export default function FeaturedProject({image, title, description, tags, links,
                 <ul className={"flex flex-wrap cursor-default max-w-[500px] items-center text-sm my-1 dark-slate font-monospace whitespace-nowrap"}>
                     {
                         tags.map((t, i) => {
-                            return <li key={i} className={`mr-5 md:mr-0 ${orientation  ? 'md:ml-5' : `md:mr-5`}`}>{t}</li>
+                            return <li key={i} className={`mr-5 md:mr-0 ${orientation ? 'md:ml-5' : `md:mr-5`}`}>{t}</li>
                         })
                     }
                 </ul>
@@ -22,11 +24,14 @@ export default function FeaturedProject({image, title, description, tags, links,
                     {
                         Object.keys(links).map((l, i) => {
                             // eslint-disable-next-line jsx-a11y/anchor-has-content
-                            return <a key={i} href={links[l]} className={`hover-accent mr-6 ${l} ${i === (!orientation ? 0 : Object.keys(links).length - 1) ? "md:mr-0" : "md:mx-6"}`}/>
+                            return <a key={i} href={links[l]} className={`hover-accent mr-6 ${l} ${i === (!orientation ? 0 : Object.keys(links).length - 1) ? "md:mr-0" : "md:mx-6"}`} />
                         })
                     }
                 </div>
             </div>
         </div>
     )
+
 }
+
+export default FeaturedProjects;

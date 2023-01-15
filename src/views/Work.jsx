@@ -1,26 +1,42 @@
-import SysMon from "../images/projects/dashboard.png"
-import Journal from "../images/projects/journal.png"
+import { useState } from "react";
 import FeaturedProject from "../components/FeaturedProjects";
 import Project from "../components/Projects";
-import {useState} from "react";
+import Forkify from "../images/projects/forkify.png";
+import Slack from "../images/projects/slack.png";
 
 export default function Work() {
 
     const [projects, setProjects] = useState([
         {
-            name: "SysMon - System Monitoring Tool",
-            description: "A system monitoring tool which works in a network or over internet. It looks over available system resources' performance, generate logs and alerts user on any abnormality.",
-            tags: ["Python-Flask", "React", "Tailwind", "Sockets"],
-            links: {"fab fa-github": "https://github.com/ishwarjagdale/sys.mon", "fas fa-external-link": "https://sys-mon.pages.dev/"},
-            image: SysMon
+            name: "Slack Clone - Realtime chatting app",
+            description: " A real-time collaboration tool that streamlines communication and improves productivity for teams of all sizes.",
+            tags: ["JavaScript", "React", "Firebase", "Styled Components"],
+            links: { "fab fa-github": "https://github.com/tejas-naik/slack-clone", "fas fa-external-link": "https://https://slack-clone-3356e.web.app/" },
+            image: Slack
         },
         {
-            name: "Journal - Medium Clone",
-            description: "This is a simple clone of medium.com created using ReactJS, TailwindCSS, Flask-Python (Backend), Google Photos API",
-            tags: ["React", "Python", "Postgres", "Google Cloud"],
-            links: {"fab fa-github": "https://github.com/ishwarjagdale/journal"},
-            image: Journal
+            name: "Forkify - 1,000,000 Recipes",
+            description: "A comprehensive recipe app with over a million delicious recipes to choose from. Easily search and filter by ingredients, dietary restrictions, and meal type to find the perfect recipe for any occasion.",
+            tags: ["Javascript", "HTML, CSS", "API", "Netlify"],
+            links: { "fab fa-github": "https://github.com/tejas-naik/forkify" },
+            image: Forkify
+        },
+        {
+            name: "Forkify - 1,000,000 Recipes",
+            description: "A comprehensive recipe app with over a million delicious recipes to choose from. Easily search and filter by ingredients, dietary restrictions, and meal type to find the perfect recipe for any occasion.",
+            tags: ["Javascript", "HTML, CSS", "API", "Netlify"],
+            links: { "fab fa-github": "https://github.com/tejas-naik/forkify" },
+            image: Forkify
         }
+    ]);
+
+    const [otherProjects, setOtherProjects] = useState([
+        {
+            title: "",
+            description: "",
+            links: "",
+            tags: "",
+        },
     ])
 
     return (
@@ -51,19 +67,19 @@ export default function Work() {
                     <Project
                         title={"SysMon's Backend Server"}
                         description={"SysMon applications backend server made with Python. "}
-                        links={{"fab fa-github": "https://github.com/ishwarjagdale/sys.mon"}}
+                        links={{ "fab fa-github": "https://github.com/ishwarjagdale/sys.mon" }}
                         tags={["Python-Flask", "Threading", "Postgres", "Sockets", "REST"]}
                     />
                     <Project
                         title={"Docket - Cloud based note application"}
                         description={"A simple & secure note taking application with ExpressJS backend connected with Postgres SQL."}
-                        links={{"fab fa-github": "https://github.com/ishwarjagdale/docket"}}
+                        links={{ "fab fa-github": "https://github.com/ishwarjagdale/docket" }}
                         tags={["React", "Express", "Postgres"]}
                     />
                     <Project
                         title={"Apple Airpods Website Clone"}
                         description={"An attempt to clone Apple's airpods animation by applying lottie animation on a custom a 3D phone model."}
-                        links={{"fab fa-github": "https://github.com/ishwarjagdale/lottie-animation", "fas fa-external-link": "https://ishwarjagdale.github.io/lottie-animation"}}
+                        links={{ "fab fa-github": "https://github.com/ishwarjagdale/lottie-animation", "fas fa-external-link": "https://ishwarjagdale.github.io/lottie-animation" }}
                         tags={["Lottie Animation", "Javascript", "CSS"]}
                     />
                 </div>
