@@ -1,56 +1,58 @@
-import {useState} from "react";
+import { useState } from "react";
 
 export default function Experience() {
 
     const [work, setWork] = useState({
-        "Oasis InfoByte": {
+        "404 Solutions.Inc": {
             url: "https://oasisinfobyte.com/",
-            position: "Java Developer",
-            duration: "May - July 2022",
-            content: ["Built projects using concepts of OOPs",
-                "Completed projects like ATM Machine, Number Guessing Game and fulfilled all the requirements as stated"
+            position: "Web Developer",
+            duration: "Feb 2022 - Dec 2022",
+            content: ["Built UI for clients websites",
+                "Completed a Taxi Management Project(TroTro)",
+                "Used Flask for back-end for the apps",
             ]
         },
-        "Rinex.Ai": {
-            url: "https://rinex.ai/",
+        "Freelancing": {
+            url: "https://tejas-naik/github.io/portfolio.com/",
             position: "Web Developer",
-            duration: "February - March 2021",
-            content: ["Worked as the only web developer in a team of 12",
-                "Developed an event website for inter-state hackathon which we conducted",
+            duration: "Dec 2022 - Present",
+            content: ["Built UI for clients websites",
+                "Completed a Taxi Management Project(TroTro)",
+                "Used Flask for back-end for the apps",
             ]
-        }
+        },
     })
 
     const [certifications, setCertifications] = useState({
-        "Automating Real-World Tasks with Python": {
-            url: "https://coursera.org/share/3d778b5a6dd8449da384fdd30f99a296",
-            provider: "Google & Coursera",
-            font: "google"
+        "Python For Everybody Specialization": {
+            url: "https://coursera.org/share/38a28c002034c0dd6f049ce250a932ae",
+            provider: "University of Michigan & Coursera",
+            font: "gg"
         },
-        "From Data to Insights with Google Cloud": {
-            url: "https://www.coursera.org/account/accomplishments/specialization/LHTMWADX74T6",
-            provider: "Google & Coursera",
-            font: "google"
+        "#100DaysOfCode Python Pro Bootcamp": {
+            url: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-8a5c4488-95dd-4eb3-9f5a-8b0a424d8b5c.pdf",
+            provider: "Udemy & London App Brewery",
+            font: "gg"
         },
-        "Data Analysis with Python": {
-            url: "https://www.freecodecamp.org/certification/ishwarjagdale/data-analysis-with-python-v7",
-            provider: "FreeCodeCamp",
-            font: "free-code-camp"
+        "Javascript: All-in-One Development Suite": {
+            url: "https://github.com/RNTejas/certificates/blob/master/JSSimplilearn.pdf",
+            provider: "Simplilearn",
+            font: "gg"
         },
-        "Scientific Computing with Python": {
-            url: "https://www.freecodecamp.org/certification/ishwarjagdale/scientific-computing-with-python-v7",
-            provider: "FreeCodeCamp",
-            font: "free-code-camp"
+        "The Complete JavaScript Course 2022: From Zero to Expert!": {
+            url: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-6f80c187-5b46-426f-8950-56c0d88d017e.pdf",
+            provider: "Udemy",
+            font: "gg"
         },
-        "JavaScript Algorithms and Data Structures": {
-            url: "https://www.freecodecamp.org/certification/ishwarjagdale/javascript-algorithms-and-data-structures",
-            provider: "FreeCodeCamp",
-            font: "free-code-camp"
+        "Introduction to Internet Of Things(IoT)": {
+            url: "https://github.com/RNTejas/certificates/blob/master/30449834_SCPDRecordofCompletion.pdf",
+            provider: "Stanford University (SCPD)",
+            font: "gg"
         },
-        "Responsive Web Design": {
-            url: "https://www.freecodecamp.org/certification/ishwarjagdale/responsive-web-design",
-            provider: "FreeCodeCamp",
-            font: "free-code-camp"
+        "Introduction to Artificial Intelligence": {
+            url: "https://github.com/RNTejas/certificates/blob/master/Coursera%20IBM%20AI.pdf",
+            provider: "Coursera & IBM",
+            font: "gg"
         }
     })
 
@@ -58,22 +60,22 @@ export default function Experience() {
 
     return (
         <>
-            <div className={"flex flex-col text-left items-center max-w-[1000px] pt-16 pb-32 w-full"}>
+            <div className={"flex flex-col text-left items-center max-w-[880px] pt-24 pb-32 w-full"}>
                 <div className={"flex items-center w-full header-line pb-16"}>
                     <span className={"accent mr-4 text-xl font-monospace"}>02.</span><span className={"text-[22px] whitespace-nowrap slate font-Poppins font-[600]"}>Experience & Achievements</span>
                 </div>
                 <p className={"dark-slate w-full mb-2 leading-7"}>
                     As in 2022, I have almost 5-6 years of non-professional experience. I'm a self-learned programmer, Python, HTML & CSS being my initial stack I further learned C, Java, JavaScript, and SQl.
-                    </p>
+                </p>
                 <p className={"dark-slate w-full mb-4 leading-7"}>I've worked with APIs, cloud services such as <a href={"https://aws.amazon.com/"}>Amazon AWS</a>, <a href={"https://cloud.google.com/"}>Google Cloud</a>,
                     and gained experience by building full stack web applications with variety of frameworks like <a href={"https://flask.palletsprojects.com/en/2.2.x/"}>Flask</a> in Python,
                     React and Express in Javascript.
                 </p>
-                <div className={"flex flex-col md:flex-row w-full mt-12"}>
+                <div className={"flex flex-col justify-center mb-24 md:flex-row w-full mt-12"}>
                     <ul className={"flex md:flex-col text-sm slate-alt overflow-x-scroll font-monospace mr-6 work-list mb-8 md:mb-0"}>
                         {
                             Object.keys(work).map((k, i) => {
-                                return <li onClick={() => setActiveTab(i)} className={`p-3 px-6 cursor-pointer border-b-2 md:border-b-0 md:border-l-2 ${activeTab === i ? "active-item": ""}`}>{k}</li>
+                                return <li onClick={() => setActiveTab(i)} className={`p-3 px-6 cursor-pointer border-b-2 md:border-b-0 md:border-l-2 ${activeTab === i ? "active-item" : ""}`}>{k}</li>
                             })
                         }
                     </ul>
@@ -95,17 +97,17 @@ export default function Experience() {
                         }
                     </div>
                 </div>
-                <div className={"flex items-center justify-center w-full pt-28 pb-8"}>
-                    <h3 className={"text-2xl slate font-[600]"}>Certifications</h3>
+                <div className={"flex items-center w-full header-line pb-8"}>
+                    <span className={"accent mr-4 text-xl font-monospace"}>2.1</span><span className={"text-[20px] whitespace-nowrap slate font-Poppins font-[600]"}>Certifications</span>
                 </div>
                 <ul className={"flex w-full flex-col text-md slate font-monospace cert-list"}>
                     {
-                        Object.keys(certifications).map((k, i) => {
+                        Object.keys(certifications).map((certificate, i) => {
                             return <li onClick={() => setActiveTab(i)} className={`p-3 px-6 cursor-pointer`}>
-                                <a href={certifications[k].url} target={"_blank"} rel="noreferrer" >
-                                    <i className={`mr-4 w-[20px] text-center accent fab fa-${certifications[k].font}`}/>
-                                    <span>{k}</span>
-                                    <span className={"ml-2 hidden md:block text-sm slate-alt"}>- {certifications[k].provider}</span>
+                                <a href={certifications[certificate].url} target={"_blank"} rel="noreferrer" >
+                                    <i className={`mr-4 w-[20px] text-center accent fab fa-${certifications[certificate].font}`} />
+                                    <span>{certificate}</span>
+                                    <span className={"ml-2 hidden md:block text-sm slate-alt"}>- {certifications[certificate].provider}</span>
                                 </a>
                             </li>
                         })
