@@ -9,7 +9,7 @@ function Projects({ title, description, links, tags }) {
                     {
                         Object.keys(links).map((l, i) => {
                             // eslint-disable-next-line jsx-a11y/anchor-has-content
-                            return <a key={i} target="_blank" rel="noreferrer" href={links[l]} className={`hover-accent ${l} ${i === (Object.keys(links).length - 1) ? "" : "mx-6"}`} />
+                            return <a key={i} target="_blank" rel="noreferrer" href={links[l]} className={`hover-accent text-2xl ${l} ${i === (Object.keys(links).length - 1) ? "" : "mx-6"}`} />
                         })
                     }
                 </div>

@@ -68,7 +68,25 @@ export default function Work() {
             },
             tags: ["JavaScript", "React", "styled-coomponents", "react-reveal"],
         },
+        {
+            title: "Keeper Notes App",
+            description: 'Efficiently organize and keep track of your thoughts and ideas with our note-taking app.',
+            links: {
+                "fas fa-external-link": "https://tejas-naik.github.io/notes/",
+                "fab fa-github": "https://github.com/Tejas-Naik/notes",
+            },
+            tags: ["JavaScript", "React", "localstorage", "React Hooks"],
+        },
 
+        {
+            title: "Hulu Clone",
+            description: 'Hulu clone built for practice of HTML, CSS, Responsive design.',
+            links: {
+                "fas fa-external-link": "https://tejas-naik.github.io/Hulu-Clone/",
+                "fab fa-github": "https://github.com/Tejas-Naik/hulu-clone",
+            },
+            tags: ["HTML", "CSS", "responsive-design"],
+        },
     ])
 
     return (
@@ -93,7 +111,7 @@ export default function Work() {
             <div className={"flex flex-col items-center max-w-[1000px] pb-32 w-full"}>
                 <div className={"flex flex-col items-center justify-center w-full pb-16"}>
                     <h3 className={"text-2xl slate mb-[10px] font-[600]"}>Other Noteworthy Projects</h3>
-                    <a href={"https://github.com/ishwarjagdale"} className={"accent text-sm font-monospace"}>view the archive</a>
+                    <a target="_blank" rel="noreferrer" href={"https://github.com/Tejas-Naik?tab=repositories"} className={"accent text-sm font-monospace"}>view the archive</a>
                 </div>
                 <div className={"grid md:grid-cols-3 gap-4 w-full"}>
                     {otherProjects.map((project) => (
