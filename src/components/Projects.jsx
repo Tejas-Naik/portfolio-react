@@ -1,13 +1,15 @@
-export default function Project({title, description, links, tags}) {
+import React from 'react'
+
+function Projects({ title, description, links, tags }) {
     return (
         <div className={"div-back rounded flex flex-col drop-shadow-2xl p-8 hover-displace translate-8"}>
             <div className={"flex items-center justify-between"}>
-                <i className={"far fa-folder accent text-3xl"}/>
+                <i className={"far fa-folder accent text-3xl"} />
                 <div className={"flex items-center dark-slate"}>
                     {
                         Object.keys(links).map((l, i) => {
                             // eslint-disable-next-line jsx-a11y/anchor-has-content
-                            return <a key={i} href={links[l]} className={`hover-accent ${l} ${i === (Object.keys(links).length - 1) ? "" : "mx-6"}`}/>
+                            return <a key={i} target="_blank" rel="noreferrer" href={links[l]} className={`hover-accent ${l} ${i === (Object.keys(links).length - 1) ? "" : "mx-6"}`} />
                         })
                     }
                 </div>
@@ -24,5 +26,8 @@ export default function Project({title, description, links, tags}) {
                 }
             </ul>
         </div>
+
     )
 }
+
+export default Projects;

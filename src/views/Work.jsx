@@ -2,41 +2,73 @@ import { useState } from "react";
 import FeaturedProject from "../components/FeaturedProjects";
 import Project from "../components/Projects";
 import Forkify from "../images/projects/forkify.png";
+import Netflix from "../images/projects/netflix.png";
 import Slack from "../images/projects/slack.png";
 
 export default function Work() {
 
     const [projects, setProjects] = useState([
         {
-            name: "Slack Clone - Realtime chatting app",
+            name: "Slack - Realtime chatting (clone)",
             description: " A real-time collaboration tool that streamlines communication and improves productivity for teams of all sizes.",
             tags: ["JavaScript", "React", "Firebase", "Styled Components"],
-            links: { "fab fa-github": "https://github.com/tejas-naik/slack-clone", "fas fa-external-link": "https://https://slack-clone-3356e.web.app/" },
+            links: {
+                "fas fa-external-link": "https://slack-clone-3356e.web.app/",
+                "fab fa-github": "https://github.com/tejas-naik/slack-clone",
+            },
             image: Slack
         },
         {
             name: "Forkify - 1,000,000 Recipes",
             description: "A comprehensive recipe app with over a million delicious recipes to choose from. Easily search and filter by ingredients, dietary restrictions, and meal type to find the perfect recipe for any occasion.",
             tags: ["Javascript", "HTML, CSS", "API", "Netlify"],
-            links: { "fab fa-github": "https://github.com/tejas-naik/forkify" },
+            links: {
+                "fas fa-external-link": "https://forkify-tejas.netlify.app/",
+                "fab fa-github": "https://github.com/tejas-naik/forkify"
+            },
             image: Forkify
         },
         {
-            name: "Forkify - 1,000,000 Recipes",
-            description: "A comprehensive recipe app with over a million delicious recipes to choose from. Easily search and filter by ingredients, dietary restrictions, and meal type to find the perfect recipe for any occasion.",
-            tags: ["Javascript", "HTML, CSS", "API", "Netlify"],
-            links: { "fab fa-github": "https://github.com/tejas-naik/forkify" },
-            image: Forkify
+            name: "Netflix (clone)",
+            description: "Stay up to date with the latest and greatest in entertainment with our Netflix clone, featuring the most popular and trending shows, and trailers for all the newest movies and series.",
+            tags: ["Javascript", "API", "react-youtube", "TMDB", "MovieTrailer"],
+            links: {
+                "fas fa-external-link": "https://netflix-tejas.netlify.app/",
+                "fab fa-github": "https://github.com/tejas-naik/netflix-clone"
+            },
+            image: Netflix
         }
     ]);
 
     const [otherProjects, setOtherProjects] = useState([
         {
-            title: "",
-            description: "",
-            links: "",
-            tags: "",
+            title: "Omnifood - Never cook again",
+            description: "a food delivery app that uses machine learning to create personalized meal plans based on dietary preferences, allergies, and nutritional goals.",
+            links: {
+                "fas fa-external-link": "https://tejas-naik.github.io/omnifood",
+                "fab fa-github": "https://github.com/Tejas-Naik/omnifood",
+            },
+            tags: ["HTML", "CSS", "UI-Principles", "Responsive Design"],
         },
+        {
+            title: "Score-A-Thon",
+            description: '"Roll to 100" is a dice game where players roll and accumulate points trying to reach 100 before other players.',
+            links: {
+                "fas fa-external-link": "https://tejas-naik.github.io/Pig-Game/",
+                "fab fa-github": "https://github.com/Tejas-Naik/Pig-Game",
+            },
+            tags: ["HTML", "CSS", "JavaScript", "Game Logic"],
+        },
+        {
+            title: "Tesla Clone",
+            description: 'Tesla clone website, built using React for a seamless user interface and optimized performance.',
+            links: {
+                "fas fa-external-link": "https://tesla-tejas.netlify.app/",
+                "fab fa-github": "https://github.com/Tejas-Naik/tesla-clone",
+            },
+            tags: ["JavaScript", "React", "styled-coomponents", "react-reveal"],
+        },
+
     ])
 
     return (
@@ -64,24 +96,14 @@ export default function Work() {
                     <a href={"https://github.com/ishwarjagdale"} className={"accent text-sm font-monospace"}>view the archive</a>
                 </div>
                 <div className={"grid md:grid-cols-3 gap-4 w-full"}>
-                    <Project
-                        title={"SysMon's Backend Server"}
-                        description={"SysMon applications backend server made with Python. "}
-                        links={{ "fab fa-github": "https://github.com/ishwarjagdale/sys.mon" }}
-                        tags={["Python-Flask", "Threading", "Postgres", "Sockets", "REST"]}
-                    />
-                    <Project
-                        title={"Docket - Cloud based note application"}
-                        description={"A simple & secure note taking application with ExpressJS backend connected with Postgres SQL."}
-                        links={{ "fab fa-github": "https://github.com/ishwarjagdale/docket" }}
-                        tags={["React", "Express", "Postgres"]}
-                    />
-                    <Project
-                        title={"Apple Airpods Website Clone"}
-                        description={"An attempt to clone Apple's airpods animation by applying lottie animation on a custom a 3D phone model."}
-                        links={{ "fab fa-github": "https://github.com/ishwarjagdale/lottie-animation", "fas fa-external-link": "https://ishwarjagdale.github.io/lottie-animation" }}
-                        tags={["Lottie Animation", "Javascript", "CSS"]}
-                    />
+                    {otherProjects.map((project) => (
+                        <Project
+                            title={project.title}
+                            description={project.description}
+                            links={project.links}
+                            tags={project.tags}
+                        />
+                    ))}
                 </div>
             </div>
         </>
