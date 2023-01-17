@@ -2,7 +2,7 @@ import React from 'react';
 
 function FeaturedProjects({ image, title, description, tags, links, orientation = 1 }) {
     return (
-        <div className={"flex items-center w-full relative h-[436px] mb-[1px] border border-slate-700 md:border-0 drop-shadow md:drop-shadow-none"}>
+        <div className={"flex items-center w-full relative h-[436px] mb-[12px] border border-slate-700 md:border-0 drop-shadow md:drop-shadow-none"}>
             <div className={`md:max-w-[55%] absolute ${orientation ? "left-0" : "right-0"} h-full md:h-auto md:w-full`}>
                 <div className={"w-full h-full absolute top-0 bg-[#1d4752] opacity-40 brightness-50 hover:hidden z-10"} />
                 <a target="_blank" rel="noreferrer" href={Object.values(links)[0]}>

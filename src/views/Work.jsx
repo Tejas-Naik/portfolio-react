@@ -77,16 +77,48 @@ export default function Work() {
             },
             tags: ["JavaScript", "React", "localstorage", "React Hooks"],
         },
-
         {
             title: "Hulu Clone",
-            description: 'Hulu clone built for practice of HTML, CSS, Responsive design.',
+            description: 'Hulu clone built for practice of HTML, CSS, Responsive design and best UI practices',
             links: {
                 "fas fa-external-link": "https://tejas-naik.github.io/Hulu-Clone/",
                 "fab fa-github": "https://github.com/Tejas-Naik/hulu-clone",
             },
             tags: ["HTML", "CSS", "responsive-design"],
         },
+        {
+            title: "2D Snake Game",
+            description: "Our 2D Snake game built using Python's Turtle library is a fun and nostalgic experience.",
+            links: {
+                "fab fa-github": "https://github.com/Tejas-Naik/-100DaysOfCode/tree/master/Day20%20Snake%20Game",
+            },
+            tags: ["Python", "turtle-graphics", "OOP", "Game-Logic"],
+        },
+        {
+            title: "Spotify Playlist",
+            description: "Introducing an app that uses Spotify's API to create a personalized playlist of your favorite artists.",
+            links: {
+                "fab fa-github": "https://github.com/Tejas-Naik/-100DaysOfCode/tree/master/Day46%20Spotify%20Playlist",
+            },
+            tags: ["Python", "API", "Spotify", "OOP", "Billboard-API"],
+        },
+        {
+            title: "Data Entry Automation",
+            description: "Data Entry Automation bot that scrapes the website and stores the data to the Google Sheets",
+            links: {
+                "fab fa-github": "https://github.com/Tejas-Naik/-100DaysOfCode/tree/master/Day53%20Data%20Entry%20Automation",
+            },
+            tags: ["Python", "API", "Web-Scraping", "Selenium", "BeautifulSoup"],
+        },
+        {
+            title: "Blog Site (Flask)",
+            description: "Blog website built using Flask is a powerful and easy to use platform for creating, managing and publishing blog content.",
+            links: {
+                "fab fa-github": "https://github.com/Tejas-Naik/-100DaysOfCode/tree/master/Day57%20Blog%20Post%20website/blog-templating-start",
+            },
+            tags: ["Python", "Flask", "API", "Bootstrap",],
+        },
+
     ])
 
     return (
