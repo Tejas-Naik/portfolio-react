@@ -7,7 +7,9 @@ export default function Experience() {
             url: "https://oasisinfobyte.com/",
             position: "Web Developer",
             duration: "Feb 2022 - Dec 2022",
-            content: ["Built UI for clients websites",
+            content: [
+                "Built UI for clients websites",
+                "Responsive Design",
                 "Completed a Taxi Management Project(TroTro)",
                 "Used Flask for back-end for the apps",
             ]
@@ -16,9 +18,11 @@ export default function Experience() {
             url: "https://tejas-naik/github.io/portfolio.com/",
             position: "Web Developer",
             duration: "Dec 2022 - Present",
-            content: ["Built UI for clients websites",
-                "Completed a Taxi Management Project(TroTro)",
-                "Used Flask for back-end for the apps",
+            content: [
+                "Built UI for clients websites",
+                "Mobile-responsive design",
+                "Accessibility",
+                "Maintenance and support"
             ]
         },
     })
@@ -61,17 +65,10 @@ export default function Experience() {
     return (
         <>
             <div className={"flex flex-col text-left items-center max-w-[880px] pt-24 pb-32 w-full"}>
-                <div className={"flex items-center w-full header-line pb-16"}>
+                <div className={"flex items-center w-full header-line"}>
                     <span className={"accent mr-4 text-xl font-monospace"}>02.</span><span className={"text-[22px] whitespace-nowrap slate font-Poppins font-[600]"}>Experience & Achievements</span>
                 </div>
-                <p className={"dark-slate w-full mb-2 leading-7"}>
-                    As in 2022, I have almost 5-6 years of non-professional experience. I'm a self-learned programmer, Python, HTML & CSS being my initial stack I further learned C, Java, JavaScript, and SQl.
-                </p>
-                <p className={"dark-slate w-full mb-4 leading-7"}>I've worked with APIs, cloud services such as <a href={"https://aws.amazon.com/"}>Amazon AWS</a>, <a href={"https://cloud.google.com/"}>Google Cloud</a>,
-                    and gained experience by building full stack web applications with variety of frameworks like <a href={"https://flask.palletsprojects.com/en/2.2.x/"}>Flask</a> in Python,
-                    React and Express in Javascript.
-                </p>
-                <div className={"flex flex-col justify-center mb-24 md:flex-row w-full mt-12"}>
+                <div className={"flex flex-col justify-start ml-14 mb-24 md:flex-row w-full mt-12"}>
                     <ul className={"flex md:flex-col text-sm slate-alt overflow-x-scroll font-monospace mr-6 work-list mb-8 md:mb-0"}>
                         {
                             Object.keys(work).map((k, i) => {

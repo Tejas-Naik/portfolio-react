@@ -42,6 +42,15 @@ export default function Work() {
 
     const [otherProjects, setOtherProjects] = useState([
         {
+            title: "Crwn Clothing e-commerce",
+            description: "Full-Stack e-commerce clothing app that accepts order with stripe payments ",
+            links: {
+                "fas fa-external-link": "https://ecom-tejas.netlify.app/",
+                "fab fa-github": "https://github.com/Tejas-Naik/ecommerce-react",
+            },
+            tags: ["React", "Firebase", "Redux", "API", "Typescript", "Stripe"],
+        },
+        {
             title: "Omnifood - Never cook again",
             description: "a food delivery app that uses machine learning to create personalized meal plans based on dietary preferences, allergies, and nutritional goals.",
             links: {
@@ -93,14 +102,6 @@ export default function Work() {
                 "fab fa-github": "https://github.com/Tejas-Naik/-100DaysOfCode/tree/master/Day20%20Snake%20Game",
             },
             tags: ["Python", "turtle-graphics", "OOP", "Game-Logic"],
-        },
-        {
-            title: "Spotify Playlist",
-            description: "Introducing an app that uses Spotify's API to create a personalized playlist of your favorite artists.",
-            links: {
-                "fab fa-github": "https://github.com/Tejas-Naik/-100DaysOfCode/tree/master/Day46%20Spotify%20Playlist",
-            },
-            tags: ["Python", "API", "Spotify", "OOP", "Billboard-API"],
         },
         {
             title: "Data Entry Automation",
