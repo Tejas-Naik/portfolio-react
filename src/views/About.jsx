@@ -10,10 +10,24 @@ function About() {
                         <span className={"text-2xl whitespace-nowrap slate font-Poppins font-[600]"}>About me</span>
                     </div>
                     <p className={"dark-slate w-full mb-4 leading-7"}>
-                        Hello! My name is Ishwar and I enjoy creating things that live on the internet and helps out people. My interest in programming grew back in 2017 when I decided to write a blog, lack of good themes on the platform and thinking lot of people will read my blog I decided to make my own templates — turns out customizing blogger templates and creating new from scratch taught me a lot about the whole front end world.
+                        Hello, I'm Tejas Naik and I'm passionate about creating beautiful and functional
+                        web applications. My interest in web development started when I saw an ad about
+                        creating an App. I was fascinated by the idea of being able to build something
+                        that could be accessed and used by people all over the world.
                     </p>
                     <p className={"dark-slate w-full mb-4 leading-7"}>
-                        Initiating with Python fast-forward to today, I have added C, Java, JavaScript, React, SQL and many other tools to my skill set and now learning new frameworks and technologies . My main focus these days is exploring my interests like data science and machine learning, while continuously improving as a full stack developer.
+                        Since then, I've learned a lot about frontend development online. And have built
+                        several web applications, including a <a href='https://netflix-tejas.netlify.app' target="_blank" rel="noreferrer" >Netflix Clone </a>
+                        , a <a href='https://slack-tejas.netlify.app' target='_blank' rel="noreferrer">Slack clone</a>
+                        , and a recipe search app called <a href='https://forkify-tejas.netlify.app' target='_blank' rel="noreferrer">Forkify</a> using the Forkify API. These projects have given me
+                        a solid foundation in HTML, CSS, JavaScript, and React.
+                    </p>
+                    <p className={"dark-slate w-full mb-4 leading-7"}>
+                        I have worked as a frontend developer at <a href='https://404solutions.netlify.app' target='_blank' rel="noreferrer">404 Solutions</a>,
+                        where I had the opportunity
+                        to work on Taxi Management System that improved my skills in collaboration,
+                        problem-solving, and attention to detail. I'm excited to continue building on this
+                        experience and explore new opportunities.
                     </p>
                     <p className={"dark-slate w-full mb-4 leading-7"}>
                         Here are a few technologies I’ve been working with recently:

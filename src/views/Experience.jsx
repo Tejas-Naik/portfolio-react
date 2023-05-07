@@ -75,21 +75,21 @@ export default function Experience() {
                     <ul className={"flex md:flex-col text-sm slate-alt overflow-x-scroll font-monospace mr-6 work-list mb-8 md:mb-0"}>
                         {
                             Object.keys(work).map((k, i) => {
-                                return <li onClick={() => setActiveTab(i)} className={`p-3 px-6 cursor-pointer border-b-2 md:border-b-0 md:border-l-2 ${activeTab === i ? "active-item" : ""}`}>{k}</li>
+                                return <li key={i} onClick={() => setActiveTab(i)} className={`p-3 px-6 cursor-pointer border-b-2 md:border-b-0 md:border-l-2 ${activeTab === i ? "active-item" : ""}`}>{k}</li>
                             })
                         }
                     </ul>
                     <div className={"p-2"}>
                         {
                             Object.keys(work).map((k, i) => {
-                                return <div className={`${activeTab === i ? "" : "hidden"}`}>
+                                return <div key={i} className={`${activeTab === i ? "" : "hidden"}`}>
                                     <div className={`font-Poppins text-xl mb-1 font-[500]`}>
                                         <span className={"slate mr-2"}>{work[k].position}</span><a href={work[k].url} className={"accent"}>@ {k}</a>
                                     </div>
                                     <span className={"slate text-sm font-monospace"}>{work[k].duration}</span>
                                     <ul className={"flex flex-col bullet-list mt-4 max-w-[540px] slate-alt leading-6 text-sm"}>
                                         {
-                                            Object.values(work[k].content).map((v) => <li className={"mb-2"}>{v}</li>)
+                                            Object.values(work[k].content).map((v, i) => <li key={i} className={"mb-2"}>{v}</li>)
                                         }
                                     </ul>
                                 </div>
@@ -103,7 +103,7 @@ export default function Experience() {
                 <ul className={"flex w-full flex-col text-md slate font-monospace cert-list"}>
                     {
                         Object.keys(certifications).map((certificate, i) => {
-                            return <li onClick={() => setActiveTab(i)} className={`p-3 px-6 cursor-pointer`}>
+                            return <li key={i} onClick={() => setActiveTab(i)} className={`p-3 px-6 cursor-pointer`}>
                                 <a href={certifications[certificate].url} target={"_blank"} rel="noreferrer" >
                                     <i className={`mr-4 w-[20px] text-center accent fab fa-${certifications[certificate].font}`} />
                                     <span>{certificate}</span>

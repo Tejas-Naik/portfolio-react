@@ -130,6 +130,7 @@ export default function Work() {
                 {
                     projects.map((p, i) => {
                         return <FeaturedProject
+                            key={i}
                             image={p.image}
                             title={p.name}
                             description={p.description}
@@ -146,8 +147,9 @@ export default function Work() {
                     <a target="_blank" rel="noreferrer" href={"https://github.com/Tejas-Naik?tab=repositories"} className={"accent text-sm font-monospace"}>view the archive</a>
                 </div>
                 <div className={"grid md:grid-cols-3 gap-4 w-full"}>
-                    {otherProjects.map((project) => (
+                    {otherProjects.map((project, i) => (
                         <Project
+                            key={i}
                             title={project.title}
                             description={project.description}
                             links={project.links}
