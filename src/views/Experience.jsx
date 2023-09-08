@@ -8,21 +8,11 @@ export default function Experience() {
             position: "Web Developer",
             duration: "Feb 2022 - Dec 2022",
             content: [
-                "Built UI for clients websites",
-                "Responsive Design",
-                "Completed a Taxi Management Project(TroTro)",
-                "Used Flask for back-end for the apps",
-            ]
-        },
-        "Freelancing": {
-            url: "https://tejas-naik/github.io/portfolio.com/",
-            position: "Web Developer",
-            duration: "Dec 2022 - Present",
-            content: [
-                "Built UI for clients websites",
-                "Mobile-responsive design",
-                "Accessibility",
-                "Maintenance and support"
+                "Developing and maintaining web applications using Javascript, Python, and other related technologies.",
+                "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+                "Implementing responsive design and ensuring cross-browser compatibility.",
+                "Participating in code reviews and providing constructive feedback to other developers.",
+                "Employed Python and Flask for efficient DBMS and API development"
             ]
         },
     })
@@ -31,7 +21,7 @@ export default function Experience() {
         "Python For Everybody Specialization": {
             url: "https://coursera.org/share/38a28c002034c0dd6f049ce250a932ae",
             provider: "University of Michigan & Coursera",
-            font: "gg"
+            font: "gg",
         },
         "#100DaysOfCode Python Pro Bootcamp": {
             url: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-8a5c4488-95dd-4eb3-9f5a-8b0a424d8b5c.pdf",
@@ -45,7 +35,7 @@ export default function Experience() {
         },
         "The Complete JavaScript Course 2022: From Zero to Expert!": {
             url: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-6f80c187-5b46-426f-8950-56c0d88d017e.pdf",
-            provider: "Udemy",
+            provider: "Jonas Schmedtmann & Udemy",
             font: "gg"
         },
         "Introduction to Internet Of Things(IoT)": {
@@ -53,11 +43,12 @@ export default function Experience() {
             provider: "Stanford University (SCPD)",
             font: "gg"
         },
-        "Introduction to Artificial Intelligence": {
-            url: "https://github.com/RNTejas/certificates/blob/master/Coursera%20IBM%20AI.pdf",
-            provider: "Coursera & IBM",
+        "The Ultimate React Course (React, Redux) 2023": {
+            url: "https://www.udemy.com/certificate/UC-5f72bf4f-565a-4bdb-a1a9-4d8a663dd647/",
+            provider: "Jonas Schmedtmann & Udemy",
             font: "gg"
-        }
+        },
+
     })
 
     const [activeTab, setActiveTab] = useState(0);

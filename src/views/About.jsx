@@ -36,9 +36,13 @@ function About() {
                         <li>HTML, CSS</li>
                         <li>Javascript (ES6+)</li>
                         <li>React</li>
-                        <li>Python</li>
-                        <li>Flask</li>
-                        <li>SQL</li>
+                        <li>Redux</li>
+                        <li>Tailwind CSS</li>
+                        <li>Styled Components</li>
+                        <li>Supabase</li>
+                        <li>Firebase</li>
+                        {/* <li>Python</li>
+                        <li>Flask</li> */}
 
                     </ul>
                 </div>
