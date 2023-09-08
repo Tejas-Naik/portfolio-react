@@ -3,20 +3,21 @@ import FeaturedProject from "../components/FeaturedProjects";
 import Project from "../components/Projects";
 import Forkify from "../images/projects/forkify.png";
 import Netflix from "../images/projects/netflix.png";
+import TheWildOasis from "../images/projects/the-wild-oasis.png";
 import Slack from "../images/projects/slack.png";
 
 export default function Work() {
 
     const [projects, setProjects] = useState([
         {
-            name: "Slack - Realtime chatting (clone)",
-            description: " A real-time collaboration tool that streamlines communication and improves productivity for teams of all sizes.",
-            tags: ["JavaScript", "React", "Firebase", "Styled Components"],
+            name: "The Wild Oasis - Hotel Management",
+            description: " The 'Wild Oasis Hotel Management App' is a staff-centric application designed to simplify guest check-in, booking management, and related tasks for hotel staff, providing a user-friendly interface to efficiently handle guest arrivals, reservations, and other hotel management functions.",
+            tags: ["React", "Supabase", "React Query" ,"Styled-Components", "HOC"],
             links: {
                 "fas fa-external-link": "https://slack-clone-3356e.web.app/",
                 "fab fa-github": "https://github.com/tejas-naik/slack-clone",
             },
-            image: Slack
+            image: TheWildOasis
         },
         {
             name: "Forkify - 1,000,000 Recipes",
