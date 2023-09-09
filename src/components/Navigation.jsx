@@ -41,19 +41,19 @@ function Navigation() {
             </a>
           </li>
           <li className={"py-3 md:px-4 md:py-0"}>
-            <a className={"hover-accent"} href={"/experience"}>
+            <a className={"hover-accent"} href={"#experience"}>
               <span className={"mr-2 accent"}>02.</span>
               <span>Experience</span>
             </a>
           </li>
           <li className={"py-3 md:px-4 md:py-0"}>
-            <a className={"hover-accent"} href={"/work"}>
+            <a className={"hover-accent"} href={"#work"}>
               <span className={"mr-2 accent"}>03.</span>
               <span>Work</span>
             </a>
           </li>
           <li className={"py-3 md:px-4 md:py-0"}>
-            <a className={"hover-accent"} href={"/contact"}>
+            <a className={"hover-accent"} href={"#contact"}>
               <span className={"mr-2 accent"}>04.</span>
               <span>Contact</span>
             </a>

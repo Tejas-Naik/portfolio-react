@@ -170,6 +170,7 @@ export default function Work() {
   return (
     <>
       <div
+        id="work"
         className={
           "flex flex-col items-center max-w-[1000px] pt-16 pb-32 w-full"
         }
