@@ -1,8 +1,9 @@
-import React, { useRef } from "react";
+import React, { useRef,useState } from "react";
 import emailjs from "@emailjs/browser";
 
 function EmailForm() {
   const form = useRef();
+  const [message, setMessage] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -18,10 +19,12 @@ function EmailForm() {
         (result) => {
           console.log(result.text);
           console.log("Message sent");
+          setMessage("Message sent, will get back to you soon!")
           e.target.reset();
         },
         (error) => {
           console.log(error.text);
+          setMessage(error.text)
         }
       );
   };
@@ -36,24 +39,25 @@ function EmailForm() {
         <input
           type="text"
           name="user_name"
-          className="w-[600px] p-2 rounded-md mb-2 bg-[#ccd6f6]"
+          className="w-[300px] text-gray-900 p-2 rounded-md mb-2 bg-[#ccd6f6] md:w-[600px]"
         />
         <label className="text-md font-md dark-slate">Email</label>
         <input
           type="email"
           name="user_email"
-          className="w-[600px] p-2 rounded-md mb-2 bg-[#ccd6f6]"
+          className="w-[300px] text-gray-900 p-2 rounded-md mb-2 bg-[#ccd6f6] md:w-[600px]"
         />
         <label className="text-md font-md dark-slate">Message</label>
         <textarea
           name="message"
-          className="w-[600px] p-2 rounded-md mb-2 bg-[#ccd6f6]"
+          className="w-[300px] text-gray-900 p-2 rounded-md mb-2 bg-[#ccd6f6] md:w-[600px]"
         />
         <input
           type="submit"
           value="Send"
-          className="w-10 md:w-fit accent hover-btn accent-border border py-2 px-4 text-md font-monospace rounded"
+          className="md:w-fit accent hover-btn accent-border border py-2 px-4 text-md font-monospace rounded"
         />
+        <p>{message}</p>
       </form>
     </div>
   );
