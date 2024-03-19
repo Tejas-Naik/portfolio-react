@@ -49,7 +49,7 @@ function About() {
 
                 <div className={"flex justify-around self-center w-1/2"}>
                     <div className={"w-300 h-300"}>
-                        <img src="https://pbs.twimg.com/profile_images/1546160607786778625/X1i2Leku_400x400.jpg" alt="Headshot" />
+                        <img src="https://pbs.twimg.com/profile_images/1718855563436756992/RYWtgoDW_400x400.jpg" alt="Headshot" />
                     </div>
                 </div>
             </div>
