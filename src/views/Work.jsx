@@ -46,6 +46,16 @@ export default function Work() {
 
   const [otherProjects, setOtherProjects] = useState([
     {
+      title: "WebWave Solutions",
+      description:
+        "3D AI-driven Agency landing page for web development solutions",
+      links: {
+        "fas fa-external-link": "https://ecom-tejas.netlify.app/",
+        "fab fa-github": "https://github.com/Tejas-Naik/ecommerce-react",
+      },
+      tags: ["React", "Firebase", "Redux", "API", "Typescript", "Stripe"],
+    },
+    {
       title: "Crwn Clothing e-commerce",
       description:
         "Full-Stack e-commerce clothing app that accepts order with stripe payments ",
