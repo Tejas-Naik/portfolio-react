@@ -50,10 +50,10 @@ export default function Work() {
       description:
         "3D AI-driven Agency landing page for web development solutions",
       links: {
-        "fas fa-external-link": "https://ecom-tejas.netlify.app/",
-        "fab fa-github": "https://github.com/Tejas-Naik/ecommerce-react",
+        "fas fa-external-link": "https://webwave-tejas.netlify.app/",
+        "fab fa-github": "https://github.com/Tejas-Naik/brainwave",
       },
-      tags: ["React", "Firebase", "Redux", "API", "Typescript", "Stripe"],
+      tags: ["React", "3D", "Animation", "API", "JavaScript", "TailwindCSS"],
     },
     {
       title: "Crwn Clothing e-commerce",
