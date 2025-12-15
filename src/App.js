@@ -25,6 +25,7 @@ import Contact from "./views/Contact";
 import Experience from "./views/Experience";
 import Home from "./views/Home";
 import Work from "./views/Work";
+import Teaching from "./views/Teaching";
 
 import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
@@ -34,11 +35,17 @@ function App() {
   return (
     <>
       <Navigation />
-      <div id={"content"} className={"flex flex-col w-[100vw] px-8 lg:p-0 overflow-x-hidden overflow-y-auto flex-1 justify-center items-center"}>
+      <div
+        id={"content"}
+        className={
+          "flex flex-col w-[100vw] px-6 md:px-10 lg:px-0 overflow-x-hidden overflow-y-auto flex-1 justify-center items-center bg-surface pt-[120px]"
+        }
+      >
         <Home />
         <About />
         <Experience />
         <Work />
+        <Teaching />
         <Contact />
       </div>
       <SideLinks />

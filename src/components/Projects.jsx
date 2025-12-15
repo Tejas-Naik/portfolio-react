@@ -2,7 +2,7 @@ import React from 'react'
 
 function Projects({ title, description, links, tags }) {
     return (
-        <div className={"div-back rounded flex flex-col drop-shadow-2xl p-8 hover-displace translate-8"}>
+        <div className={"div-back rounded-2xl flex flex-col drop-shadow-2xl p-8 hover:-translate-y-2 transition-all duration-300 border border-slate-800/70"}>
             <div className={"flex items-center justify-between"}>
                 <i className={"far fa-folder accent text-3xl"} />
                 <div className={"flex items-center dark-slate"}>

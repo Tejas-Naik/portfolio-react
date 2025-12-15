@@ -1,28 +1,42 @@
 import React from 'react';
 
-function FeaturedProjects({ image, title, description, tags, links, orientation = 1 }) {
+function FeaturedProjects({ image, title, description, tags, links, orientation = 1, problem, audience }) {
     return (
-        <div className={"flex items-center w-full relative h-[436px] mb-[12px] border border-slate-700 md:border-0 drop-shadow md:drop-shadow-none"}>
-            <div className={`md:max-w-[55%] absolute ${orientation ? "left-0" : "right-0"} h-full md:h-auto md:w-full`}>
-                <div className={"w-full h-full absolute top-0 bg-[#1d4752] opacity-40 brightness-50 hover:hidden z-10"} />
+        <div className={"flex flex-col md:flex-row gap-6 w-full mb-12 rounded-3xl border border-slate-800/70 bg-gradient-to-br from-[#0e1b2f] via-[#0b1424] to-[#081020] p-6 md:p-10 shadow-2xl shadow-black/30 hover:-translate-y-1 hover:shadow-cyan-500/10 transition-all duration-300"}>
+            <div className={`relative w-full md:w-1/2 overflow-hidden rounded-2xl border border-slate-800/60 ${orientation ? "" : "md:order-2"}`}>
+                <div className={"absolute inset-0 bg-gradient-to-br from-[#0e213b]/40 to-transparent"} />
                 <a target="_blank" rel="noreferrer" href={Object.values(links)[0]}>
-                    <img src={image} className={`blur-sm brightness-50 h-full md:brightness-100 md:blur-0 object-cover md:object-contain drop-shadow-2xl`} alt={"Hal"} />
+                    <img src={image} className={"w-full h-full object-cover scale-[1.02] transition-transform duration-500 hover:scale-105"} alt={title} />
                 </a>
             </div>
-            <div className={`flex flex-col p-8 md:p-0 z-10 ${orientation ? "ml-auto md:items-end" : "md:items-start"} w-full md:w-fit`}>
-                <span className={"font-monospace text-sm cursor-default accent mb-2"}>Featured Project</span>
-                <a target="_blank" rel="noreferrer" href={Object.values(links)[0]}><h3 className={"cursor-pointer slate hover-accent text-2xl font-[600]"}>{title}</h3></a>
-                <p className={`cursor-default md:bg-[#112240] rounded py-6 md:px-6 max-w-[500px] dark-slate text-[15px] ${orientation ? "md:text-right" : "md:text-left"} my-4 drop-shadow-xl`}>
+            <div className={`flex flex-col w-full md:w-1/2 ${orientation ? "" : "md:order-1"}`}>
+                <span className={"font-monospace text-sm cursor-default accent mb-2 uppercase tracking-[0.2em]"}>Featured Project</span>
+                <a target="_blank" rel="noreferrer" href={Object.values(links)[0]}><h3 className={"cursor-pointer slate hover-accent text-3xl font-[600]"}>{title}</h3></a>
+                <p className={"dark-slate text-[15px] leading-7 my-4"}>
                     {description}
                 </p>
-                <ul className={"flex flex-wrap cursor-default max-w-[500px] items-center text-sm my-1 dark-slate font-monospace whitespace-nowrap"}>
+                <div className={"grid gap-4 my-4"}>
+                    {problem && (
+                        <div className={"glass-pill"}>
+                            <span className={"label"}>Problem</span>
+                            <p className={"dark-slate text-sm leading-6"}>{problem}</p>
+                        </div>
+                    )}
+                    {audience && (
+                        <div className={"glass-pill"}>
+                            <span className={"label"}>Who it’s for</span>
+                            <p className={"dark-slate text-sm leading-6"}>{audience}</p>
+                        </div>
+                    )}
+                </div>
+                <ul className={"flex flex-wrap cursor-default gap-3 items-center text-sm my-1 dark-slate font-monospace whitespace-nowrap"}>
                     {
                         tags.map((t, i) => {
-                            return <li key={i} className={`mr-5 md:mr-0 ${orientation ? 'md:ml-5' : `md:mr-5`}`}>{t}</li>
+                            return <li key={i} className={'pill'}>{t}</li>
                         })
                     }
                 </ul>
-                <div className={"flex flex-wrap items-center text-lg mt-4 dark-slate"}>
+                <div className={"flex flex-wrap items-center text-lg mt-4 dark-slate gap-4"}>
                     {
                         Object.keys(links).map((l, i) => {
                             // eslint-disable-next-line jsx-a11y/anchor-has-content
@@ -31,7 +45,7 @@ function FeaturedProjects({ image, title, description, tags, links, orientation 
                                 target="_blank"
                                 rel="noreferrer"
                                 href={links[l]}
-                                className={`hover-accent mr-6 ${l} ${i === (!orientation ? 0 : Object.keys(links).length - 1) ? "md:mr-0" : "md:mx-6"}`}
+                                className={`hover-accent ${l}`}
                             />
                         })
                     }
