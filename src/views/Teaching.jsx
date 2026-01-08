@@ -2,9 +2,9 @@ import React from "react";
 import Reveal from "../components/Reveal";
 
 const impactStats = [
-  { label: "Live classes delivered", value: "1000+" },
-  { label: "Students mentored", value: "150+" },
-  { label: "Countries taught", value: "25+" }
+  { label: "Live classes delivered", value: "2500+" },
+  { label: "Students mentored", value: "500+" },
+  { label: "Countries taught", value: "30+" }
 ];
 
 const teachingHighlights = [

@@ -19,8 +19,8 @@ function Home() {
                     </h2>
                     <div className={"flex flex-wrap gap-3 text-sm font-monospace dark-slate mt-5"}>
                         <span className={"pill"}>1000+ classes</span>
-                        <span className={"pill"}>150+ students</span>
-                        <span className={"pill"}>10+ countries</span>
+                        <span className={"pill"}>500+ students</span>
+                        <span className={"pill"}>30f+ countries</span>
                     </div>
                     <p className={"py-8 dark-slate text-[16px] leading-8 max-w-[720px]"}>
                         I design and ship AI-first experiences for the web, launch lean SaaS products,

@@ -3,9 +3,9 @@ import Reveal from "../components/Reveal";
 
 const roles = [
   {
-    company: "Founder & Coding Instructor @ Tezcode.tech",
+    company: "Tezcode.tech",
     url: "https://tezcode.tech",
-    position: "Founder, Coding Bootcamp",
+    position: "Founder & Instructor",
     duration: "Apr 2024 – Present",
     bullets: [
       "Built a founder-first coding bootcamp focused on AI and SaaS projects.",
@@ -16,20 +16,20 @@ const roles = [
     ]
   },
   {
-    company: "Coding Teacher @ BrightChamps",
+    company: "BrightChamps",
     url: "https://brightchamps.com/",
-    position: "Coding Instructor (Global)",
+    position: "Coding Instructor",
     duration: "Oct 2023 – Present",
     bullets: [
       "Delivered 1000+ live coding classes to learners worldwide.",
-      "Mentored 150+ students across multiple countries and time zones.",
+      "Mentored 500+ students across multiple countries and time zones.",
       "Taught Python, Web Development, AI fundamentals, and Game Development.",
       "Focused on logic building, confidence, and real-world skills.",
       "Scaled teaching impact through curriculum systems and project templates."
     ]
   },
   {
-    company: "Web Developer @ 404 Solutions Inc",
+    company: "404 Solutions",
     url: "https://oasisinfobyte.com/",
     position: "Web Developer",
     duration: "Feb 2022 – Dec 2022",
@@ -65,7 +65,7 @@ export default function Experience() {
       icon: "fab fa-gg"
     },
     {
-      title: "The Complete JavaScript Course 2022: From Zero to Expert!",
+      title: "The Complete JavaScript Course 2022",
       url: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-6f80c187-5b46-426f-8950-56c0d88d017e.pdf",
       provider: "Jonas Schmedtmann & Udemy",
       icon: "fab fa-gg"
@@ -77,7 +77,7 @@ export default function Experience() {
       icon: "fab fa-gg"
     },
     {
-      title: "The Ultimate React Course (React, Redux) 2023",
+      title: "The Ultimate React Course (Redux) 2023",
       url: "https://www.udemy.com/certificate/UC-5f72bf4f-565a-4bdb-a1a9-4d8a663dd647/",
       provider: "Jonas Schmedtmann & Udemy",
       icon: "fab fa-gg"
@@ -108,9 +108,10 @@ export default function Experience() {
             "flex flex-col justify-start md:flex-row w-full mt-12 gap-6"
           }
         >
+          {/* Tabs */}
           <ul
             className={
-              "flex md:flex-col text-sm slate-alt overflow-x-scroll font-monospace mr-6 work-list mb-4 md:mb-0 rounded-xl border border-slate-800/70"
+              "flex md:flex-col text-sm slate-alt overflow-x-auto font-monospace mr-0 md:mr-6 work-list mb-6 md:mb-0 md:border-l-2 p-0 shrink-0 md:w-max snap-x gap-4 md:gap-0 border-b border-slate-800/50 md:border-b-0 pb-2 md:pb-0"
             }
           >
             {roles.map((role, i) => {
@@ -118,35 +119,42 @@ export default function Experience() {
                 <li
                   key={role.company}
                   onClick={() => setActiveTab(i)}
-                  className={`p-4 px-6 cursor-pointer border-b-2 md:border-b-0 md:border-l-2 ${
-                    activeTab === i ? "active-item" : ""
+                  className={`cursor-pointer px-2 md:px-6 py-2 md:py-3 whitespace-nowrap snap-center transition-all duration-300 relative ${
+                    activeTab === i 
+                    ? "text-accent md:border-l-2 md:-ml-[2px] border-accent font-semibold" 
+                    : "hover:text-accent"
                   }`}
                 >
+                  <span className={`hidden md:block absolute left-0 top-0 h-full w-[2px] transition-all bg-accent ${activeTab === i ? 'opacity-100' : 'opacity-0'}`}></span>
+                  <span className={`md:hidden absolute bottom-0 left-0 w-full h-[2px] transition-all bg-accent ${activeTab === i ? 'opacity-100' : 'opacity-0'}`}></span>
                   {role.company}
                 </li>
               );
             })}
           </ul>
-          <div className={"p-2 flex-1"}>
+          
+          {/* Content */}
+          <div className={"flex-1"}>
             {roles.map((role, i) => {
               return (
-                <div key={role.company} className={`${activeTab === i ? "" : "hidden"}`}>
-                  <div className={`font-Poppins text-xl mb-1 font-[600]`}>
-                    <span className={"slate mr-2"}>{role.position}</span>
-                    <a href={role.url} className={"accent"} target={"_blank"} rel="noreferrer">
+                <div key={role.company} className={`${activeTab === i ? "block animate-fadeIn" : "hidden"}`}>
+                  <div className={`font-Poppins mb-1 flex flex-col md:flex-row md:items-baseline`}>
+                    <span className={"text-xl md:text-2xl font-[600] text-slate-200 mr-2"}>{role.position}</span>
+                    <a href={role.url} className={"accent text-base md:text-lg font-mono mt-1 md:mt-0"} target={"_blank"} rel="noreferrer">
                       @ {role.company}
                     </a>
                   </div>
-                  <span className={"slate text-sm font-monospace"}>
+                  <span className={"slate-alt text-sm font-monospace block mt-1 uppercase tracking-wider"}>
                     {role.duration}
                   </span>
                   <ul
                     className={
-                      "flex flex-col bullet-list mt-4 max-w-[620px] slate-alt leading-6 text-sm"
+                      "flex flex-col bullet-list mt-6 max-w-[620px] slate-alt leading-7 text-[15px]"
                     }
                   >
                     {role.bullets.map((item) => (
-                      <li key={item} className={"mb-2"}>
+                      <li key={item} className={"mb-3 pl-4 relative"}>
+                        <span className="absolute left-0 top-2 text-accent text-xs">▹</span>
                         {item}
                       </li>
                     ))}
@@ -156,8 +164,9 @@ export default function Experience() {
             })}
           </div>
         </div>
-        <div className={"flex items-center w-full header-line pb-8 mt-10"}>
-          <span className={"accent mr-4 text-xl font-monospace"}>2.1</span>
+        
+        <div className={"flex items-center w-full header-line pb-8 mt-16"}>
+          <span className={"accent mr-4 text-xl font-monospace"}>03.</span>
           <span
             className={
               "text-[20px] whitespace-nowrap slate font-Poppins font-[600]"
@@ -166,20 +175,28 @@ export default function Experience() {
             Certifications
           </span>
         </div>
-        <ul className={"flex w-full flex-col text-md slate font-monospace cert-list"}>
+        
+        <ul className={"grid grid-cols-1 gap-3 w-full font-monospace cert-list"}>
           {certifications.map((certificate) => (
-            <li key={certificate.title} className={"p-3 px-6 cursor-pointer rounded hover:bg-[#112240]"}>
+            <li key={certificate.title} className={"group p-3 cursor-pointer rounded md:hover:-translate-y-1 transition-all duration-300 bg-[#112240]/20 hover:bg-[#112240]/40 border border-slate-800/50 hover:border-accent/30"}>
               <a
                 href={certificate.url}
                 target={"_blank"}
                 rel="noreferrer"
-                className={"flex items-center"}
+                className={"flex flex-row items-center h-full gap-4"}
               >
-                <i className={`mr-4 w-[20px] text-center accent ${certificate.icon}`} />
-                <span>{certificate.title}</span>
-                <span className={"ml-2 hidden md:block text-sm slate-alt"}>
-                  - {certificate.provider}
-                </span>
+                 <div className="flex-shrink-0 text-accent group-hover:scale-110 transition-transform duration-300 bg-[#112240] p-2 rounded-full w-10 h-10 flex items-center justify-center">
+                   <i className={`${certificate.icon} text-lg`} />
+                 </div>
+                 <div className="flex flex-col justify-center min-w-0">
+                     <span className="text-slate-200 text-[15px] font-semibold leading-tight group-hover:text-accent transition-colors truncate w-full pr-4">{certificate.title}</span>
+                     <span className={"text-xs slate-alt mt-1 font-sans truncate"}>
+                      {certificate.provider}
+                     </span>
+                 </div>
+                 <div className="ml-auto text-slate-600 group-hover:text-accent transition-colors">
+                    <i className="fas fa-external-link-alt text-xs"></i>
+                 </div>
               </a>
             </li>
           ))}
