@@ -38,7 +38,7 @@ function App() {
       <div
         id={"content"}
         className={
-          "flex flex-col w-[100vw] px-6 md:px-10 lg:px-0 overflow-x-hidden overflow-y-auto flex-1 justify-center items-center bg-surface pt-[120px]"
+          "flex flex-col w-full px-6 md:px-10 lg:px-0 justify-center items-center pt-[100px] md:pt-[120px]"
         }
       >
         <Home />
